@@ -1,9 +1,13 @@
 public class Controller {
 
-    
-    public void initCounter(String counterName, int counterStart) throws InterruptedException {
+    @Start
+    public void initCounter(String counterName, int counterStart){
         Counter counter = new Counter(counterName, counterStart);
-        counter.startCounter();
+        try {
+            counter.startCounter();
+        }catch(Exception e){
+            System.out.println("Counter Fehler");
+        }
     }
 
 }

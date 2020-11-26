@@ -11,7 +11,7 @@ public class Counter {
     }
 
     public void startCounter() throws InterruptedException {
-        while (true){
+        while (counterStart < 30){
             System.out.println(counterName + ": " + counterStart);
             counterStart++;
             TimeUnit.SECONDS.sleep(1);
