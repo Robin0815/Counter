@@ -1,7 +1,7 @@
 public class Controller {
 
-    public void initCounter(String counterName, int counterStart){
-        Counter counter = new Counter(counterName, counterStart);
+    public void initCounter(String counterName, int counterStart, GUI gui){
+        Counter counter = new Counter(counterName, counterStart, gui);
         try {
             counter.startCounter();
         }catch(Exception e){

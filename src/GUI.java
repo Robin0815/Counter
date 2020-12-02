@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 public class GUI {
 
@@ -30,7 +31,7 @@ public class GUI {
         frame.add(jScrollPane);
 
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
 
@@ -39,5 +40,8 @@ public class GUI {
         JScrollBar sb = jScrollPane.getVerticalScrollBar();
         sb.setValue(sb.getMaximum());
         textArea.update(textArea.getGraphics());
+    }
+    public void close(){
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }
