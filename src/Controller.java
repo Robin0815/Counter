@@ -1,11 +1,11 @@
 public class Controller {
 
-    public void initCounter(String counterName, int counterStart, GUI gui){
-        Counter counter = new Counter(counterName, counterStart, gui);
+    public void initCounter(int counterStart, GUI gui){
+        Counter counter = new Counter( counterStart, gui);
         try {
             counter.startCounter();
         }catch(Exception e){
-            System.out.println("Counter Fehler");
+            e.printStackTrace();
         }
     }
 

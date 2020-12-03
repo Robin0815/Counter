@@ -1,9 +1,13 @@
 public class Client {
-    private static GUI gui = new GUI("Counter");
+    private static int counter = 0;
+    private static GUI gui;
     @Start
     public static void main(String[] args) {
         Controller con = new Controller();
-        con.initCounter("count", 0, gui);
+        gui = new GUI("Counter"+counter);
+        counter++;
+        Counter.setRun(true);
+        con.initCounter(0, gui);
     }
 
     @Stop
