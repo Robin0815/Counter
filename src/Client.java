@@ -21,6 +21,7 @@ public class Client {
     @Stop
     public static void stop(){
         Counter.setRun(false);
+        myLog.sendLog("Stopped");
         gui.close();
     }
 }
